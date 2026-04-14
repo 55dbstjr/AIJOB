@@ -26,6 +26,7 @@
 7. STATE.md 갱신: 오늘 완료한 작업 + 내일 이어갈 작업
 8. TODO.md: 완료 항목 체크/삭제
 9. Jira: 완료 티켓 Done 전환, 미완료는 InProgress 유지
+10. Git: 변경된 파일 git add + commit (push는 별도 확인)
 
 > 어느 시점에 끊겨도 파일만 읽으면 이어갈 수 있어야 함
 
@@ -38,8 +39,15 @@
 
 ## Work 운영 규칙
 - 티켓 생성 시 work 지시서도 함께 생성 (`.claude/work/{프로젝트}/{티켓번호}.md`)
+- 프로젝트 폴더: mico, mu, Analyzer, Demo
 - 각 유니티 프로젝트 세션에서 `/work`로 지시서 확인 후 작업 착수
+- AIJOB 세션은 업무 관리 허브, 실제 코딩은 각 프로젝트 세션에서 진행
 - 작업 완료 시: Jira 티켓 Done 전환 + 해당 md 파일 삭제
+
+## MCP 토큰 관리
+- 민감 정보(API 토큰 등)는 .env 파일에 `export VAR=값` 형태로 저장
+- ~/.bashrc에서 source하여 셸 시작 시 자동 로드
+- .mcp.json env 블록에 토큰을 넣지 말 것 — 셸 환경변수 상속으로 전달
 
 ## 보안 규칙
 - .env, credentials, API key, kubeconfig, *.pem, *.key 커밋 금지
