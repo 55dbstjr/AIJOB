@@ -1,18 +1,19 @@
 # STATE — 현재 작업 상태
 
-> 최종 업데이트: 2026-04-14
+> 최종 업데이트: 2026-04-16
 
 ## 오늘 완료한 작업
-- Jira 티켓 3건 생성 (IW-631, IW-632, IW-633) — Demo 스토리 하위
-- IW-226 본문에 작업 지시서 정리 반영
+- Jira → Plane 완전 전환
+  - 미완료 티켓 9건 Plane 이관 (모듈 배정, 부모-자식 관계 포함)
+  - 글로벌/프로젝트 CLAUDE.md Jira 참조 → Plane 변경
+  - /work 스킬에 Plane 정책 통합
+- Plane 티켓 CRUD 테스트 (생성/삭제/모듈 이동)
+- 403 오류 원인 파악 (advanced-search 엔드포인트 권한)
+- 한글 인코딩 원인 파악 (PYTHONIOENCODING=utf-8)
 
 ## 내일 이어갈 작업
-- IW-226: Demo 프로젝트 구조 세팅 (기한 4/17)
-  - Inspector 참조 연결, ClickableObject 부착, 카메라 프리셋 세팅
-- IW-631: UI 디자인 작업 (기한 4/17)
-- IW-632: AIChat 2D/3D 그래프 예시 (기한 4/21)
-- IW-241: MU CI/CD 환경 세팅 (기한 4/17)
-- IW-256: deps 이미지 빌드 & Harbor push (기한 4/17)
+- IW-187: Demo 프로젝트 구조 세팅 (진행 중)
+- IW-186: MU CI/CD 환경 세팅 (준비 완료)
 
 ## ACTIVE_TASK
 - 없음 (퇴근)
