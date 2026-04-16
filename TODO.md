@@ -9,6 +9,7 @@
 - [x] Jira → Plane 마이그레이션 (티켓 9건 이관, 모듈 배정)
 - [x] CLAUDE.md / 스킬 Plane 전환
 - [x] Plane 티켓 CRUD 테스트
+- [x] 메모리 → CLAUDE.md 통합
 
 ### 진행 중
 - [ ] IW-187 — Demo: 프로젝트 구조 세팅 ⭐
