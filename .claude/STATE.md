@@ -1,21 +1,25 @@
 # STATE — 현재 작업 상태
 
-> 최종 업데이트: 2026-04-28
+> 최종 업데이트: 2026-04-30
 
 ## 오늘 완료/진척
-- 없음 — IW-345 Unity 실 검증 미진행 (이월)
+- IW-254 묶음 종료 — 어제(4/29) IW-345/343/344 모두 완료, 오늘 부모 IW-254 Done 전환
+- 완료 티켓 work 지시서 정리 — `.claude/work/mico/IW-254.md`, `IW-343.md`, `IW-344.md`, `IW-345.md` 삭제
+- **글로벌 CLAUDE.md 다중 PC 동기화 세팅**
+  - `shared/global-CLAUDE.md` 신규 (글로벌 규칙 원본, git 추적)
+  - `~/.claude/CLAUDE.md` → `shared/global-CLAUDE.md` symlink (관리자 PowerShell + 개발자 모드 ON 필요)
+  - `docs/setup.md`에 다른 PC 셋업 절차 추가
 
-## 내일 이어갈 작업 (2026-04-29)
-- IW-345 Unity Editor 실 검증 (PLT/HW16MM/SHBT/OR22MM 5종) — **이월 1회**
-- SigSTL 0→1 초기화 실 환경 검증 (잔상 미이월)
-- 박아둔 `[P1-DEBUG]` 디버그 로그 정리
-- 회귀 테스트 — `FinalizeToEndPosition`만으로 cancel-restart 끊김 보정 충분한지
-- IW-343 / IW-344 착수 (검증 마무리 후)
+## 내일 이어갈 작업 (2026-05-01)
+- **다음 묶음 착수 결정** — IW-187(Demo 구조) / IW-186(MU CI/CD) / IW-191(deps 이미지) 중 우선순위 정하기
+- 부모 에픽 IW-184(MCT FANUC 3D)는 backlog 상태 — 다음 하위 작업 선정 필요
+- IW-209 단독 진행 여부 확인 (work 지시서 남아있음, Plane 상태 미점검)
 
 ## ACTIVE_TASK
-- IW-345 Unity 실 검증부터 시작
+- 없음 — 다음 작업 풀에서 선택 필요
 
 ## 참고
-- IW-254 묶음(IW-343/344/345)은 mico-3d 프로젝트에서 작업 중 (mu 세션 아님)
-- mico-3d 메모리에 fix 상세 보존: `project_mct_phantom_diagonal_p1.md`, `feedback_data_guard_absolute.md`, `project_mct_cut_signal_unreliable.md`
-- 어제(2026-04-27) 시뮬 5종 가드위반 0건 달성 상태 그대로 — Unity 검증만 남음
+- IW-254 묶음(IW-343/344/345) mico-3d 프로젝트에서 작업 종료
+- mico-3d 메모리 fix 상세: `project_mct_phantom_diagonal_p1.md`, `feedback_data_guard_absolute.md`, `project_mct_cut_signal_unreliable.md`
+- HW16MM-BAC 대각선 복귀 선 이슈는 IW-345 description 내 #3에 보류 사항으로 정리됨 (티켓 별도 생성 안 함)
+- 글로벌 규칙 수정 시 `shared/global-CLAUDE.md` 직접 편집 → commit/push → 다른 PC `git pull` 한 번에 동기화

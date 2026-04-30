@@ -49,3 +49,43 @@ export AIJOB_ROOT="$HOME/gitproj/Dev_AIJOB"  # ← 실제 clone 경로로 변경
 
 ## 현재 적용된 프로젝트
 `Dev_AIJOB`, `mico-3d`, `mu`, `Demo`, `nazare-analyzer`
+
+## 글로벌 CLAUDE.md 공유 (여러 PC 동기화)
+
+`~/.claude/CLAUDE.md`(글로벌 규칙)는 PC마다 따로 존재하지만, AIJOB 레포의 `shared/global-CLAUDE.md`를 원본으로 두고 symlink로 연결해 git 한 번에 동기화한다.
+
+### 새 PC에서 1회 셋업
+
+**전제조건:** AIJOB 레포 clone 완료, Windows 11 기준.
+
+1. **개발자 모드 ON** — 설정 → 개인 정보 및 보안 → 개발자용 → "개발자 모드" 토글 ON
+   - 또는 검색창에 "개발자용 설정" 입력
+   - 회사 PC라 그룹 정책으로 막혀있으면 관리자 권한 PowerShell로 진행 가능
+
+2. **관리자 권한 PowerShell** 실행 (시작 메뉴 → PowerShell 우클릭 → "관리자 권한으로 실행")
+
+3. 기존 `~/.claude/CLAUDE.md`가 있으면 백업 후 삭제:
+   ```powershell
+   if (Test-Path "$env:USERPROFILE\.claude\CLAUDE.md") {
+     Copy-Item "$env:USERPROFILE\.claude\CLAUDE.md" "$env:USERPROFILE\.claude\CLAUDE.md.bak"
+     Remove-Item "$env:USERPROFILE\.claude\CLAUDE.md" -Force
+   }
+   ```
+
+4. symlink 생성 (AIJOB clone 경로는 본인 환경에 맞게 조정):
+   ```powershell
+   New-Item -ItemType SymbolicLink `
+     -Path "$env:USERPROFILE\.claude\CLAUDE.md" `
+     -Target "$env:USERPROFILE\gitproj\dev_AIJOB\shared\global-CLAUDE.md"
+   ```
+
+5. 검증 — `Mode` 컬럼에 `l` 표시 + Target 경로가 보이면 정상:
+   ```powershell
+   Get-Item "$env:USERPROFILE\.claude\CLAUDE.md" | Select-Object Mode, Name, Target
+   ```
+
+### 동작 방식
+- 한 PC에서 `shared/global-CLAUDE.md` 수정 → `git push`
+- 다른 PC에서 `git pull` → 즉시 적용 (symlink가 최신 내용을 자동으로 가리킴)
+- 일반 사용자 권한으로는 symlink 생성이 막히므로 **반드시 관리자 권한 PowerShell** 사용
+- 일반 사용자 권한 PowerShell에서 개발자 모드만으로 가능한 환경도 있으나, 그룹 정책에 따라 차단되는 경우가 많음
