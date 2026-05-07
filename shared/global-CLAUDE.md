@@ -12,6 +12,7 @@
 ## Plane 규칙
 - Plane 티켓 생성 시 담당자는 오윤석(본인)이 기본 — Member ID: `2106b5c3-0adc-495f-99a8-3ff5683a6a07`
 - "티켓" = Plane, "지라 티켓"이라고 명시할 때만 Jira 사용
+- **하위 티켓은 부모 모듈에 반드시 배정** — `create_work_item`은 모듈을 직접 받지 않으므로, 부모(`parent`) 지정해 하위 티켓을 만든 직후 `add_work_items_to_module`로 부모와 동일 모듈에 추가할 것. 부모가 여러 모듈이면 모두 동일하게 적용. 모듈 미연결 시 Slack 알림이 가지 않음. (관련: `~/.claude/skills/work/SKILL.md` 9번 항목)
 
 ## 원격 서버 접속 규칙
 - 192.168.3.80 서버에 SSH 접속 시 읽기 전용 명령어만 실행할 것 (ls, cat, echo, whoami, kubectl get 등)

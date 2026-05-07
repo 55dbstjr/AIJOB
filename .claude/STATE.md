@@ -1,28 +1,52 @@
 # STATE — 현재 작업 상태
 
-> 최종 업데이트: 2026-05-04
+> 최종 업데이트: 2026-05-07 (퇴근 시점)
 
-## 오늘 완료/진척 (2026-05-04)
-- **IW-438 신규 — Mico 4월 마무리 작업** (부모, 진행 중, target 2026-05-09)
-- **IW-439 신규 — UI 수정 및 변경작업** (IW-438 하위, 진행 중)
-  - RoomPage 관련 UI 수정 5건 정리:
-    1. RealTime_LabelData 풀 재사용 fold 잔상 수정 검증 — `SetMachine` 시작부 강제 닫힘 + `Set_MachineLable` 데이터 로딩 후 정식 fold. 핵심 fix는 견고하나 부수 이슈 2건(API 실패 시 fold 영구 무반응, race condition) 추가 식별
-    2. T2 1번룸 "S/D #1 자동화" 라벨 중복 표시 진단 — 4 머신 SO 동일 식별자(`_tableName=t2_room01_port2, _tag=20`) 원인 확정 → 데이터 측 처리 완료
-    3. RoomPage datalabel pivot 동적 적용 — `UI_RoomTopPopup.cs`, visibleIndex 기준 (0.5,1) / (0.5,0) 분기
-    4. 장비 순서 정렬 — Hierarchy 자식 순서 그대로 반영 확인, 코드 변경 없이 재배열로 해결
-    5. 장비 마우스 오버 highlight — `UI_RoomTopPopup.cs` + `UIController.cs` + `MicoRoom.cs` 3파일 변경, MachineSO.GetAllMachines로 부모+SubMachines 매칭
-- stale work 지시서 정리 — `.claude/work/mico/IW-209.md`, `.claude/work/mu/IW-228.md` 삭제 (둘 다 서동주 담당 + 4/17 완료)
+## 오늘 완료/진척 (2026-05-07)
 
-## 내일 이어갈 작업 (2026-05-05)
-- IW-439 부수 이슈 2건 — fold 잔상 fix의 후속:
-  - API 실패 시 fold 버튼 영구 무반응
-  - race condition 처리
-- IW-438 4월 마무리 잔여 — 추가 하위 작업 식별 필요
+### IW-439 — RoomPage UI 수정 및 변경작업 (부모 진행 중)
+
+오늘 IW-439 하위로 9개 티켓 신설 + 작업 처리:
+
+**완료 (8건)**:
+- **IW-462** RealTime_LabelData 풀 재사용 fold 잔상 수정 (검증) — 5/4 작업분 사후 티켓화
+- **IW-463** T2 1번룸 "S/D #1 자동화" 라벨 중복 표시 진단 — 5/4 작업분 사후 티켓화
+- **IW-464** RoomPage datalabel pivot 동적 적용 — 5/4 작업분 사후 티켓화
+- **IW-465** RoomPage 장비 순서 정렬 진단 — 5/4 작업분 사후 티켓화
+- **IW-466** 장비 마우스 오버 시 highlight 효과 추가 — 5/4 작업분 사후 티켓화
+- **IW-468** 그래프카드 위치 변경 및 장비위치 변경 — 오늘 신규 작업
+- **IW-469** Roompage DataPanel과 장비가동카드 정렬 — 오늘 신규 작업
+- **IW-470** MachinePage 상태 UI 수정 — 오늘 신규 작업
+
+**진행 중 (1건)**:
+- **IW-467** 월드맵 우측하단 내용삭제 — 내일 이어감
+
+**부수 이슈 (티켓화 보류, IW-439 본문 메모만)**:
+- API 실패 시 fold 버튼 영구 무반응
+- race condition 처리
+
+### IW-404 — MCT 장비 2차 현장검증
+
+- work 지시서 신규 작성: `.claude/work/mico/IW-404.md` (4/29 분석 결과 + 단기/중장기 액션 정리)
+- 실제 코드 작업은 진행 안 함 (진행 중 상태 유지)
+
+### TODO/STATE 정리
+
+- TODO에 누락돼 있던 IW-404 복귀
+- 출근 시점 STATE/TODO 갱신
+
+## 내일 이어갈 작업 (2026-05-08)
+
+- **IW-467** 월드맵 우측하단 내용삭제 (진행 중)
+- **IW-438/439** 4월 마무리 잔여 — IW-439 부수 이슈 2건 처리 검토 (target 5/9 임박)
+- **IW-404** A1 거리 가드 시뮬·Unity 적용 시작 (단기 작업 1·2)
 
 ## ACTIVE_TASK
-- IW-439 (UI 수정 및 변경작업, 진행 중)
+- IW-438/439 (Mico 4월 마무리, target 5/9 임박)
+- IW-467 (월드맵 우측하단 — IW-439 하위, 진행 중)
+- IW-404 (MCT 2차 현장검증, 코드 작업 미시작)
 
 ## 참고
-- 본인 담당 work 지시서 현황: `Demo/IW-187.md`, `Analyzer/nazare-analyzer.md`, `mico/IW-438.md`(신규)
+- 본인 담당 work 지시서 현황: `mico/IW-438.md`, `mico/IW-404.md`(신규), `Demo/IW-187.md`, `Analyzer/nazare-analyzer.md`
 - IW-254 묶음(IW-343/344/345) mico-3d 프로젝트에서 4/30 종료
 - 글로벌 CLAUDE.md 다중 PC 동기화: `shared/global-CLAUDE.md` symlink 방식 (4/30 세팅)
