@@ -1,13 +1,13 @@
 # TODO — 오윤석 (유니티 개발자)
 
 > Plane이 원본. 이 파일은 오늘의 일일 뷰.
-> 최종 갱신: 2026-05-12 (퇴근)
+> 최종 갱신: 2026-05-13 (퇴근)
 
-## 2026-05-13 (수) 예정
+## 2026-05-14 (목) 예정
 
 ### 진행 중 🔥
-- [ ] IW-187 — Demo: 프로젝트 구조 세팅 (Plane 진행 중) — **내일 메인**: ClickableObject 부착 + CameraPreset 세팅, Floor 가림 해결 (5/12 진척 0, 이월)
-- [ ] IW-188 — Demo: UI 디자인 (Plane 진행 중) — 같은 Demo 세션에서 병행 가능
+- [ ] IW-187 — Demo: 프로젝트 구조 세팅 (Plane 진행 중) — **내일 메인**: ClickableObject 부착 + CameraPreset 세팅, Factory 프리셋 Floor 가림 해결 (5/12·13 진척 0, 이월 2회 — 기한 미설정이라 카운트는 참고용)
+- [ ] IW-188 — Demo: UI 디자인 (Plane 진행 중) — 같은 Demo 세션에서 병행
 
 ### 운영/요청
 - [ ] **Slack 알림 중복 정리 요청** — Admin(조윤찬/전종현)에게 ingle-work 워크스페이스 Slack integration 또는 Webhook 중복 점검 부탁 (증상: 같은 채널 동일 메시지 2번, 스크린샷 `Desktop/slack.png`)
