@@ -1,21 +1,22 @@
 # TODO — 오윤석 (유니티 개발자)
 
 > Plane이 원본. 이 파일은 오늘의 일일 뷰.
-> 최종 갱신: 2026-05-13 (퇴근)
+> 최종 갱신: 2026-05-15 (퇴근)
 
-## 2026-05-14 (목) 예정
+## 2026-05-18 (월) 예정
 
 ### 진행 중 🔥
-- [ ] IW-187 — Demo: 프로젝트 구조 세팅 (Plane 진행 중) — **내일 메인**: ClickableObject 부착 + CameraPreset 세팅, Factory 프리셋 Floor 가림 해결 (5/12·13 진척 0, 이월 2회 — 기한 미설정이라 카운트는 참고용)
+- [ ] IW-187 — Demo: 프로젝트 구조 세팅 (Plane 진행 중) — ClickableObject 부착 + CameraPreset 세팅, Factory 프리셋 Floor 가림 해결
 - [ ] IW-188 — Demo: UI 디자인 (Plane 진행 중) — 같은 Demo 세션에서 병행
 
 ### 운영/요청
 - [ ] **Slack 알림 중복 정리 요청** — Admin(조윤찬/전종현)에게 ingle-work 워크스페이스 Slack integration 또는 Webhook 중복 점검 부탁 (증상: 같은 채널 동일 메시지 2번, 스크린샷 `Desktop/slack.png`)
 
 ### 협의/대기
-- [ ] IW-486 — `/latest/data` 신규 API: 유니티 측 응답 schema 합의자 역할. 양영준 측 schema draft 받는 즉시 검토
+- [ ] IW-486 — `/latest/data` 신규 API: 유니티 측 응답 schema 합의자 역할. 양영준 측 schema draft 받는 즉시 검토 (Plane: 해야 할 일)
 
 ### 보류
+- [ ] IW-560 — mico: D/T-DashBoard간 1대1 데이터 검증 (Plane 준비 완료, IW-486 schema 합의 결과 확인 후 검증 endpoint 기준 결정)
 - [ ] IW-481 — 모니터링 정합성 오류 수정 (준비 완료, 부모 IW-438 완료 — 후순위)
 - [ ] IW-483 — T2 장비 배치 수정 (준비 완료, 미코·윈텍 데이터 수정 선행 대기)
 
